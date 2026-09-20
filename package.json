@@ -1,0 +1,13 @@
+{
+  "name": "agroconnect",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AgroConnect — Modern Farmer-to-Buyer Digital Marketplace",
+  "scripts": {
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build:server": "npm run build --prefix server",
+    "build": "npm run build:client && npm run build:server"
+  }
+}
