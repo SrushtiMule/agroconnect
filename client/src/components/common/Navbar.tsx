@@ -21,6 +21,7 @@ import {
   MapPin,
   ShieldCheck,
   Package,
+  Github,
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -201,6 +202,18 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
                 </span>
               )}
             </button>
+
+            {/* GitHub Repository Link */}
+            <a
+              href="https://github.com/SrushtiMule/agroconnect"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="View on GitHub (SrushtiMule/agroconnect)"
+              className="p-2.5 rounded-full hover:bg-earth-100 text-slate-600 hover:text-slate-900 transition-colors flex items-center justify-center"
+              aria-label="GitHub Repository"
+            >
+              <Github className="w-5 h-5" />
+            </a>
 
             {/* Farmer Sell CTA / Dashboard Button */}
             {currentRole === 'FARMER' ? (
@@ -408,25 +421,36 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
               ))}
             </div>
 
-            <div className="px-2 pt-2 border-t border-earth-100 flex gap-2">
-              <button
-                onClick={() => {
-                  navigate('/farmer/register');
-                  setMobileMenuOpen(false);
-                }}
-                className="flex-1 bg-forest-700 text-white text-center py-2.5 rounded-lg text-sm font-semibold"
+            <div className="px-2 pt-2 border-t border-earth-100 flex flex-col gap-2">
+              <a
+                href="https://github.com/SrushtiMule/agroconnect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-semibold text-slate-700 bg-earth-50 hover:bg-earth-100 transition-colors border border-earth-200"
               >
-                Sell on AgroConnect
-              </button>
-              <button
-                onClick={() => {
-                  navigate('/marketplace');
-                  setMobileMenuOpen(false);
-                }}
-                className="flex-1 bg-earth-100 text-slate-800 text-center py-2.5 rounded-lg text-sm font-semibold"
-              >
-                Browse Crops
-              </button>
+                <Github className="w-4 h-4 text-slate-700" />
+                <span>GitHub Repository</span>
+              </a>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => {
+                    navigate('/farmer/register');
+                    setMobileMenuOpen(false);
+                  }}
+                  className="flex-1 bg-forest-700 text-white text-center py-2.5 rounded-lg text-sm font-semibold"
+                >
+                  Sell on AgroConnect
+                </button>
+                <button
+                  onClick={() => {
+                    navigate('/marketplace');
+                    setMobileMenuOpen(false);
+                  }}
+                  className="flex-1 bg-earth-100 text-slate-800 text-center py-2.5 rounded-lg text-sm font-semibold"
+                >
+                  Browse Crops
+                </button>
+              </div>
             </div>
           </div>
         )}

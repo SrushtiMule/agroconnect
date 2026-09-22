@@ -10,6 +10,7 @@ import {
   TrendingUp,
   HeartHandshake,
   Award,
+  Github,
 } from 'lucide-react';
 
 interface FooterProps {
@@ -104,6 +105,19 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
                 <Mail className="w-4 h-4 text-emerald-400" />
                 <span>support@agroconnect.in</span>
               </div>
+            </div>
+
+            <div className="pt-2">
+              <a
+                href="https://github.com/SrushtiMule/agroconnect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-forest-900/90 hover:bg-forest-800 text-slate-300 hover:text-white border border-forest-800 transition-all text-xs font-medium group"
+              >
+                <Github className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
+                <span>GitHub Repository</span>
+                <span className="text-[10px] px-1.5 py-0.5 bg-emerald-500/20 text-emerald-300 rounded font-mono">v1.0</span>
+              </a>
             </div>
           </div>
 
@@ -221,6 +235,15 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
             <button onClick={() => navigate('/contact')} className="hover:text-slate-300">
               Support & Grievances
             </button>
+            <a
+              href="https://github.com/SrushtiMule/agroconnect"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-slate-300 transition-colors"
+            >
+              <Github className="w-3.5 h-3.5 text-slate-400" />
+              <span>GitHub</span>
+            </a>
             <span className="text-slate-700">|</span>
             <span className="text-emerald-500 font-medium">Made with ❤️ for Indian Farmers</span>
           </div>
